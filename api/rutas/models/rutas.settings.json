@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rutas",
+  "info": {
+    "name": "Rutas",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "TitleESP": {
+      "type": "string",
+      "required": true
+    },
+    "TitleENG": {
+      "type": "string",
+      "required": true
+    },
+    "Icono": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "rutas": {
+      "collection": "rutas",
+      "via": "subRutas"
+    },
+    "subRutas": {
+      "model": "rutas",
+      "via": "rutas"
+    },
+    "detalles": {
+      "collection": "detalle",
+      "via": "ruta"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "detalles",
+  "info": {
+    "name": "Detalle"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TituloESP": {
+      "type": "string",
+      "required": true
+    },
+    "TituloENG": {
+      "type": "string",
+      "required": true
+    },
+    "VideoESP": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "VideoENG": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "ParagrafosESP": {
+      "type": "richtext"
+    },
+    "ParagrafosENG": {
+      "type": "richtext"
+    },
+    "ruta": {
+      "via": "detalles",
+      "model": "rutas"
+    }
+  }
+}
