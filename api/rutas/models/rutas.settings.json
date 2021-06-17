@@ -37,13 +37,14 @@
       "required": false,
       "pluginOptions": {}
     },
-    "rutas": {
-      "collection": "rutas",
+    "ruta": {
+      "model": "rutas",
       "via": "subRutas"
     },
     "subRutas": {
       "model": "rutas",
-      "via": "rutas"
+      "via": "ruta",
+      "collection": "rutas"
     },
     "detalles": {
       "collection": "detalle",
