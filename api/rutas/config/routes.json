@@ -1,6 +1,14 @@
 {
   "routes": [
     {
+      "method": "POST",
+      "path": "/rutas/correo",
+      "handler": "rutas.correo",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "GET",
       "path": "/rutas",
       "handler": "rutas.find",

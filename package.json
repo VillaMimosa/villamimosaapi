@@ -12,6 +12,7 @@
   "devDependencies": {},
   "dependencies": {
     "knex": "0.21.18",
+    "nodemailer": "^6.6.3",
     "pg": "^8.6.0",
     "pg-connection-string": "^2.5.0",
     "sqlite3": "5.0.0",
@@ -24,6 +25,7 @@
     "strapi-plugin-i18n": "3.6.3",
     "strapi-plugin-upload": "3.6.3",
     "strapi-plugin-users-permissions": "3.6.3",
+    "strapi-provider-email-sendgrid": "^3.6.6",
     "strapi-utils": "3.6.3"
   },
   "author": {
